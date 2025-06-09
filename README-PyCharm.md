@@ -239,10 +239,10 @@ All PyCharm configurations are version-controlled:
 
 ## 📚 Documentation
 
-- [**Vertical Slice Architecture**](docs/architecture.md)
-- [**PyCharm Workflow**](docs/pycharm-workflow.md)
-- [**Database Guide**](docs/database.md)
-- [**Deployment Guide**](docs/deployment.md)
+- [**Vertical Slice Architecture**](docs/vertical-slice-architecture.md) - Pattern implementation and best practices
+- [**PyCharm Workflow Guide**](docs/pycharm-workflow.md) - IDE features, debugging, and productivity tips
+- [**Database Guide**](docs/database-guide.md) - PostgreSQL, SQLAlchemy 2.0, migrations, and PyCharm tools
+- [**Deployment Guide**](docs/deployment-guide.md) - Production deployment, Docker, CI/CD, and cloud platforms
 
 ## 🏷️ License
 
