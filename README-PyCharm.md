@@ -56,11 +56,14 @@ make services-up
 
 ### 5. Open PyCharm
 The project includes pre-configured:
-- ✅ Database connections
-- ✅ Run/Debug configurations
-- ✅ Code style settings
-- ✅ File watchers
-- ✅ Docker integration
+- ✅ **Project structure** (source roots, test roots, exclusions)
+- ✅ **Python interpreter** configuration
+- ✅ **Run/Debug configurations** (FastAPI server, tests, services)
+- ✅ **Database connections** template
+- ✅ **Code style settings** (Black, isort, line length)
+- ✅ **Code inspections** (type hints, unused imports)
+- ✅ **Git integration** enabled
+- ✅ **Test runner** (pytest configured)
 
 ## 🔧 PyCharm Features
 
@@ -121,9 +124,13 @@ make docker-full
 fastapi-vertical-slice-pycharm/
 ├── .idea/                          # PyCharm configuration
 │   ├── runConfigurations/          # One-click run setups
-│   ├── dataSources.xml             # Database connections
-│   ├── codeStyles/                 # Code formatting rules
-│   └── inspectionProfiles/         # Code quality rules
+│   ├── codeStyles/                 # Code formatting rules (Black, isort)
+│   ├── inspectionProfiles/         # Code quality rules
+│   ├── misc.xml                    # Python interpreter settings
+│   ├── modules.xml                 # Project module configuration
+│   ├── vcs.xml                     # Git integration settings
+│   ├── *.iml                       # Module file with source roots
+│   └── dataSources.xml.template    # Database connection template
 ├── src/
 │   ├── users/                      # User management slice
 │   ├── auth/                       # Authentication slice
@@ -147,10 +154,11 @@ fastapi-vertical-slice-pycharm/
 5. **Run Tests** → One-click testing
 
 ### Database Work
-1. **Open Database tab** → Pre-configured connections
-2. **Browse schema** → Visual table relationships
-3. **Write queries** → Built-in console
-4. **Run migrations** → Integrated tools
+1. **Setup connections** → Copy `.idea/dataSources.xml.template` to `.idea/dataSources.xml`
+2. **Configure credentials** → Update database URLs and credentials
+3. **Open Database tab** → Browse schema and relationships
+4. **Write queries** → Built-in console with autocomplete
+5. **Run migrations** → Integrated Alembic tools
 
 ### Code Quality
 - **Format on save** → Automatic Black formatting
